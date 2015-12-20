@@ -43,6 +43,7 @@ Edit & Create Site hours have the same business rules. The main difference is th
     - Add Button
   - Close Button
   - Submit Button
+  
 - Functionality
   - Remove Button
     - Removes the selected time slot
@@ -137,7 +138,7 @@ Edit & Create Site hours have the same business rules. The main difference is th
         - Message
           - Open 24 hours
       - If Hours are Null
-        - Message
+        - Message   
           - Closed
     - Edit Site Hours Button
   - Empty State

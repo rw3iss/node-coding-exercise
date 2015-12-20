@@ -1,0 +1,27 @@
+
+-on edit: 
+  -edit hours
+  -edit timezone, daylight savings, site name
+
+-if there are no site hours, show "No site hours" message and "Create Site Hours" button
+-for current date+time, if open hours are defined, then show status "open", otherwise closed
+-ability to click current date+time and choose a date+time in the future to see if it will be open (extra credit)
+-ability to select a timezone and have all the times be modified based on this
+-ability to check 'daylight savings' and have the times be modified based on the current daylight savings value
+
+Week view: 
+-left/right to change week, or otherwise click the middle to select a day and pull up that week
+
+Each day:
+-day label
+-list view for hour entries as text 
+-"edit site hours" button at top/bottom of a day, shows:
+  -changes all time entries to edit view
+  -open 24 hours button
+  -add time slot button
+  -save button
+  -close button/no changes saved
+
+  -------------
+  
+  -use moment.js

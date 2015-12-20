@@ -2,21 +2,41 @@
   "name": "node-coding-exercise",
   "version": "1.0.0",
   "description": "GSTV coding exercise for BE candidates",
-  "main": "index.js",
+  "main": "web/app/app.js",
   "scripts": {
+    "start": "node --harmony /usr/local/bin/grunt start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GasStationTV/node-coding-exercise.git"
+    "url": "git+https://github.com/rw3iss/node-coding-exercise.git"
   },
   "keywords": [
     "Node"
   ],
-  "author": "Aaron Olson <aaron.olson@gstv.com> (http://www.gstv.com)",
+  "author": "Ryan Weiss (rw3iss@gmail.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GasStationTV/node-coding-exercise/issues"
+    "url": "https://github.com/rw3iss/node-coding-exercise/issues"
   },
-  "homepage": "https://github.com/GasStationTV/node-coding-exercise#readme"
+  "homepage": "https://github.com/rw3iss/node-coding-exercise#readme",
+  
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "4.x",
+    "jade": "latest",
+    "lodash": "^3.x",
+    "mongoose": "latest",
+    "async": "latest"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "~0.5.2",
+    "grunt-parallel": ">=0.4.1",
+    "grunt-express-server": ">=0.5.1",
+    "load-grunt-tasks": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=0.11.2"
+  }
 }

@@ -1,0 +1,43 @@
+{
+   "dev": {
+    "driver": "pg",
+    "user": "",
+    "password": "",
+    "host": "localhost",
+    "database": "blobs",
+    "schema": "migrations"
+  },
+
+  "sqlite-file": {
+    "driver": "sqlite3",
+    "filename": "./db.sql"
+  },
+
+  "memory-sqlite": {
+    "driver": "sqlite3",
+    "filename": ":memory:"
+  },
+
+  "prod": {
+    "driver": "mysql",
+    "user": "root",
+    "password": "root"
+  },
+
+  "pg": {
+    "driver": "pg",
+    "user": "",
+    "password": "",
+    "host": "localhost",
+    "database": "blobs",
+    "schema": "migrations"
+  },
+
+  "mongo": {
+    "driver": "mongodb",
+    "database": "my_db",
+    "host": "localhost"
+  },
+
+  "other": "postgres://uname:pw@server.com/dbname"
+}
