@@ -1,6 +1,6 @@
 # GSTV BE Coding Exercise
 
-# Notes from Ryan
+## Notes from Ryan
 1. All the basic functionality is complete. Essentially, I coded this as an 'edit-by-week' interface. You make changes to each day in the week, and submit the entire week. Only days that have been changed will be saved (ie. have any data).
 1. Only extra credit #1 is complete (check future date)
 1. I made an assumption that an 'overlap' time does not mean a timeslot that ends at the same time another begins. This is assumed valid.
