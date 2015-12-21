@@ -4,7 +4,7 @@
   "description": "GSTV coding exercise for BE candidates",
   "main": "web/app/app.js",
   "scripts": {
-    "start": "node --harmony /usr/local/bin/grunt start",
+    "start": "node --harmony ./web/app/app.js start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
