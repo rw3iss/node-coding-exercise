@@ -5,6 +5,7 @@
 1. Only extra credit #1 is complete (check future date)
 1. I made an assumption that an 'overlap' time does not mean a timeslot that ends at the same time another begins. This is assumed valid.
 
+## Index
 1. [Exercise Overview](#exercise-overview)
 1. [System Requirements](#system-requirements)
 1. [Version Control](#version-control)
