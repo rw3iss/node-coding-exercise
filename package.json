@@ -24,10 +24,11 @@
   "dependencies": {
     "body-parser": "^1.14.1",
     "express": "4.x",
+    "mongodb": "latest",
     "jade": "latest",
     "lodash": "^3.x",
-    "mongoose": "latest",
-    "async": "latest"
+    "async": "latest",
+    "moment": "latest"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

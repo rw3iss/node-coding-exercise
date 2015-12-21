@@ -18,6 +18,7 @@ app.set('views', __app + '/views');
 app.set('view engine', 'jade');
 app.use(express.static(__app + '/../public'));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Run application start sequence
 async.series([

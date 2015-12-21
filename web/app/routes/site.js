@@ -5,11 +5,7 @@ module.exports = function(app) {
 
   // Main site index view+edit page
 	app.get('/', function(req, res) {
-    SiteService.getSiteData().then(function(site) {
-      console.log("render site", site);
-
-      res.render('site', site.toJson());
-    });
+    res.render('index');
 	});
 
 };

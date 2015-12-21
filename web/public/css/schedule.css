@@ -1,0 +1,98 @@
+.site-name {
+  font-weight: bold;
+}
+
+#futureDate {
+  width: 200px;
+}
+
+.schedule {
+}
+
+.schedule .edit.left {
+  display: inline;
+}
+
+.schedule .nav {
+  display: flex;
+  flex-direction: row;
+  background: #eee;
+}
+
+.schedule .nav .left,
+.schedule .nav .right {
+  flex: 1;
+  text-align: center;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule .nav .left:hover,
+.schedule .nav .right:hover {
+   background: #ddd;
+ }
+
+.schedule .nav .days {
+  flex: 8;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.schedule .nav .days .day {
+  flex: 1;
+}
+
+.schedule .nav .days .day .dayOfWeek {
+  font-weight: bold;
+  display: block;
+}
+
+.schedule .nav .days .day .date {
+  display: block;
+}
+
+
+/* ----------------- */
+
+.schedule .week {
+  display: flex;
+  flex-direction: row;
+}
+
+.schedule .week .left,
+.schedule .week .right {
+  flex: 1;
+  text-align: center;
+}
+
+.schedule .week .days {
+  background: #aaa;
+  flex: 8;
+  display: flex;
+  flex-direction: row;
+}
+
+.schedule .week .days .day {
+  flex: 1;
+  text-align: center;
+}
+
+.schedule .week .days .day .timeslots {
+  display: block;
+}
+
+
+.schedule .week .days .day .timeslots .timeslot {
+  display: block;
+  background: #888;
+  margin: 5px 0px;
+}
+
+.schedule .week .days .day .timeslots .timeslot .time label {
+  display: block;
+  margin-bottom: 0px;
+}

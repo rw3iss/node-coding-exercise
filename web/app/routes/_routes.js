@@ -6,6 +6,9 @@ module.exports = function(app) {
   // timezone, daylight savings, and Day entries
 	require('./site')(app);
 
+  // Load partials for angular frontend
+  require('./partials')(app);
+
 	// REST api to manage site metadata
 	require('./api/site')(app);
 

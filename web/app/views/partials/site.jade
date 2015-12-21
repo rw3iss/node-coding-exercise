@@ -1,0 +1,26 @@
+div.site-info
+  div.item
+    label Site name: 
+    span(ng-show="!isEditing", ng-bind="site.name")
+    input(type="text", ng-show="isEditing", ng-model="site.name")
+
+  div.item
+    label Timezone: 
+    span(ng-show="!isEditing", ng-bind="site.timezone")
+    input(type="text", ng-show="isEditing", ng-model="site.timezone")
+
+  div.item
+    label Daylight Savings: 
+    span(ng-show="!isEditing", ng-bind="site.useDaylightSavings")
+    input(type="checkbox", ng-show="isEditing", ng-model="site.useDaylightSavings", ng-checked="site.useDaylightSavings")
+
+  div.item
+    label Has hours? 
+    span(ng-bind="site.hasHours")
+
+  div.item
+    button(ng-show="!isEditing", ng-click="editSite()") Edit Site
+    button(ng-show="isEditing", ng-click="saveSite()") Save Site
+
+  div.item
+    button(ng-click="viewSchedule()") View Schedule

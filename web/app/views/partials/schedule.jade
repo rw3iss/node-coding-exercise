@@ -1,0 +1,97 @@
+link(rel="stylesheet", href="/css/schedule.css")
+
+div.site-info
+
+  div.item
+    button(ng-click="returnToSite()") Return to Site
+
+  div.item
+    h4(ng-show="openNow && days.length") CURRENTLY OPEN
+    h4(ng-show="!openNow && days.length") CURRENTLY CLOSED
+
+  div.item
+    span Check future date: 
+    input(type="text", id="futureDate", ng-model="futureDate", placeholder="mm/dd/yyyy hh:mm am/pm")
+    button(ng-click="checkFutureDate()") Check
+    div(ng-show="futureStatus != undefined") Future date is open? {{futureStatus}}
+
+  
+  h4 Schedule:
+
+  div.item(ng-show="!site.hasHours && !isEditing")
+    div There are no site hours for 
+      span.site-name(ng-bind="site.name")
+
+    button(ng-click="editSiteHours()") Create Site Hours
+
+
+  div.item(ng-show="site.hasHours || isEditing")
+
+    div.schedule
+      div.edit
+        button(ng-show="!isEditing", ng-click="editSiteHours()") Edit Site Hours
+
+      div.edit.left
+        button(ng-show="isEditing", ng-click="cancelSiteHours()") Close
+
+      div.edit.left
+        button(ng-show="isEditing", ng-click="saveSiteHours()") Submit
+      
+      div.nav 
+        div.left
+          div.btn(ng-click="prevWeek()") Previous Week
+        div.days
+          div.day(ng-repeat="day in days")
+            span.dayOfWeek {{day.date | dayOfWeek}}
+            span.date {{day.date | dateFormat}} 
+        div.right
+          div.btn(ng-click="nextWeek()") Next Week
+      div.week
+        div.left &nbsp;
+        div.days
+          div.day(ng-repeat="day in days") 
+            div.timeslots
+              div(ng-show="!day.data.open24Hours && (day.data == null || day.data.timeSlots.length == 0)") CLOSED
+
+              div(ng-show="day.data.open24Hours") Open 24 Hours
+
+              div(ng-show="!day.data.open24Hours")
+                div.timeslot(ng-repeat="time in day.data.timeSlots")
+                  div.open.time.view(ng-show="!isEditing")
+                    label Open
+                    span(ng-bind="time.open") 
+                    span(ng-bind="time.openPeriod")
+                  div.closed.time.view(ng-show="!isEditing")
+                    label Closed
+                    span(ng-bind="time.closed")
+                    span(ng-bind="time.closedPeriod")
+
+                  div.open.time.editing(ng-show="isEditing")
+                    label Open
+                    select(name="open", ng-model="time.open")
+                      option(ng-repeat="t in validOpenTimes", ng-value="t") {{t}}
+                    select(name="ampm", ng-model="time.openPeriod")
+                      option(value="am") AM
+                      option(value="pm") PM
+
+                  div.closed.time.editing(ng-show="isEditing")
+                    label Closed 
+                    select(name="open", ng-model="time.closed")
+                      option(ng-repeat="t in validCloseTimes", ng-value="t") {{t}}
+                    select(name="ampm", ng-model="time.closedPeriod")
+                      option(value="am") AM
+                      option(value="pm") PM
+
+                  button(ng-show="isEditing", ng-click="removeTime(day, time)") Remove
+
+              div(ng-show="!day.data.open24Hours && isEditing")
+                button(ng-click="addTime(day)") Add Time
+
+              div(ng-show="!day.data.open24Hours && isEditing")
+                button(ng-click="setOpen24Hours(day, true)") Open 24 Hours
+
+              div(ng-show="day.data.open24Hours && isEditing")
+                button(ng-click="setOpen24Hours(day, false)") Remove
+
+        div.right &nbsp;
+

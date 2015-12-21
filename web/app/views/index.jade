@@ -1,0 +1,16 @@
+doctype html
+html(ng-app="gstv")
+  head
+    title #{title}
+    link(rel="stylesheet" href="/css/bootstrap/bootstrap.min.css")
+    link(rel="stylesheet" href="/css/bootstrap/bootstrap-theme.min.css")
+    script(type="text/javascript" src="/js/lib/angular/angular.min.js")
+    script(type="text/javascript" src="/js/lib/angular/angular-route.min.js")
+    script(type="text/javascript" src="/js/lib/angular/angular-resource.min.js")
+    script(type="text/javascript" src="/js/lib/momentjs/moment.js")
+
+body
+  div(ng-view)
+
+  script(type="text/javascript" src="/js/app_base.js")
+  script(type="text/javascript" src="/js/app.js")
