@@ -1,6 +1,7 @@
 # GSTV BE Coding Exercise
 
 ## Notes from Ryan
+1. Be sure to install all packages with 'npm install' in the main directory.
 1. Please start the app with 'npm start', or otherwise 'node --harmony ./web/app/app.js start', as this will run it using the harmony flag within the 'start' script in package.json.
 1. All the basic functionality is complete. Essentially, I coded this as an 'edit-by-week' interface. You make changes to each day in the week, and submit the entire week. Only days that have been changed will be saved (ie. have any data).
 1. Only extra credit #1 is complete (check future date)
